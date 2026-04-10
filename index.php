@@ -1,4 +1,3 @@
-
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +5,7 @@
 
   <style>
    * { margin: 0; padding: 0; box-sizing: border-box; }
+   html { scroll-behavior: smooth; } 
    body { font-family: 'Source Sans 3',Arial, sans-serif; background: #fff; color: #222; } 
     /* ===== TOPBAR ===== */
     .topbar {
@@ -123,8 +123,6 @@
   align-items: flex-end;
     }
 
-
-    /* bloc coloré comme Paris-Saclay */
     .hero-bloc {
       background: #003366;
       color: white;
@@ -158,6 +156,126 @@
     }
 
     .hero-bloc a:hover { color: #aac4e8; border-color: #aac4e8; }
+
+    /* ===== SECTION ===== */
+    .section { padding: 60px; }
+ 
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+ 
+    .section-header h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #003366;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+ 
+    .section-header .line {
+      flex: 1;
+      height: 2px;
+      background: #003366;
+    }
+ 
+    /* ===== CARDS ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:  20px;
+      border: none;
+    }
+ 
+    .card {
+      padding: 32px 28px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      transition: all 0.2s;
+      background: white;
+    }
+ 
+    .card:last-child { border-right:  1px solid #ddd; }
+ 
+    .card:hover { background: #f0f4ff; }
+ 
+   .card-img {
+     width: 100px;
+     height: 100px;
+     display: block;
+     object-fit: contain;
+     margin-bottom: 12px;
+    }
+ 
+    .card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #003366;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+ 
+    .card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+ 
+    .card-link {
+      color: #003366;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 2px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      padding: 40px 60px 20px;
+    }
+ 
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 30px;
+    }
+ 
+    .footer-col h4 {
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+ 
+    .footer-col p, .footer-col a {
+      font-size: 13px;
+      color: #aaa;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+ 
+    .footer-col a:hover { color: white; }
+ 
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -168,7 +286,7 @@
      <span>USTHB — Faculté d'Informatique — 2025/2026</span>
 </div>
 <div="droitre">
-  <a href="login.php">Connexion</a>
+  <a href="#acces">Connexion</a> <!-- ✅ CHANGÉ -->
   </div>
 </div>
 
@@ -184,7 +302,7 @@
   <div class="nav-links">
     <a href="index.php" class="active">Accueil</a>
     <a href="apropos.php">À propos</a>
-    <a href="login.php" class="btn-login">Se connecter</a>
+    <a href="#acces" class="btn-login">Se connecter</a> 
   </div>
 </nav>
 
@@ -194,9 +312,68 @@
   <div class="hero-bloc">
     <h1>Bienvenue sur la plateforme de scolarité de l'USTHB</h1>
     <p>Gérez facilement les étudiants, les modules et les notes de la Faculté d'Informatique depuis un seul espace.</p>
-    <a href="login.php">› Se connecter maintenant</a>
+    <a href="#acces">› Se connecter maintenant</a> <
   </div>
 </div>
+
+<!-- CARDS -->
+<div class="section" id="acces"> 
+  <div class="section-header">
+    <h2>Qui peut accéder ?</h2>
+    <div class="line"></div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-num">
+     <img src="img2/; (4).png" alt="Étudiant" class="card-img">
+    </div>
+      <h3>Etudiant</h3>
+      <p>Consultez vos notes, votre moyenne générale et téléchargez votre relevé de notes.</p>
+      <a href="login.php" class="card-link">› Accéder</a>
+    </div>
+    <div class="card">
+      <div class="card-num">
+     <img src="img2/Design sans titre.png" alt="Étudiant" class="card-img">
+    </div>
+      <h3>Enseignant</h3>
+      <p>Gérez vos modules et saisissez les notes de vos étudiants facilement.</p>
+      <a href="login-ensei.php" class="card-link">› Accéder</a>
+    </div>
+    <div class="card">
+      <div class="card-num">
+     <img src="img2/Design sans titre (1).png" alt="Étudiant" class="card-img">
+    </div>
+      <h3>Administrateur</h3>
+      <p>Gérez l'ensemble du système : inscriptions, modules, notes et utilisateurs.</p>
+      <a href="login.php" class="card-link">› Accéder</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>GesScol USTHB</h4>
+      <p>Système de gestion de scolarité de la Faculté d'Informatique de l'USTHB.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Liens rapides</h4>
+      <a href="index.php">Accueil</a>
+      <a href="#acces">Connexion</a>
+      <a href="apropos.php">À propos</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="index.php">Faculté d'Informatique</a>
+      <a href="index.php">USTHB, Bab Ezzouar</a>
+      <a href="index.php">Alger, Algérie</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025/2026 USTHB — Faculté d'Informatique — Module PWEB — 2ème Année INFO-ISIL
+  </div>
+</footer>
 
 </body>
 </html>
