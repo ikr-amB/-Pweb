@@ -1,0 +1,198 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+   body { font-family: 'Source Sans 3',Arial, sans-serif; background: #fff; color: #222; } 
+    /* ===== TOPBAR ===== */
+    .topbar {
+      background: #003366;
+      padding: 8px 60px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .topbar a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 3px;
+    }
+    .topbar span { color: #ccc; font-size: 12px; }
+    .topbar a:hover { background: rgba(255,255,255,0.1); color: white; }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background: white;
+      padding: 0 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 90px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+    }
+
+    .nav-logo .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #003366;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .nav-logo .sub {
+      font-size: 12px;
+      color: #888;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav-links a {
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 18px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 4px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #003366;
+      border-bottom: 4px solid #003366;
+    }
+
+    .nav-links a.active {
+      color: #003366;
+      border-bottom: 4px solid #003366;
+    }
+
+    .nav-links a.btn-login {
+      background: #003366;
+      color: white;
+      border-radius: 4px;
+      height: 42px;
+      margin-left: 16px;
+      padding: 0 22px;
+      border-bottom: none;
+      font-size: 14px;
+    }
+
+    .nav-links a.btn-login:hover {
+      background: #00509e;
+      border-bottom: none;
+    }
+
+        /* Formulaire */
+        .login-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 130px);
+            padding: 40px 20px;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            padding: 40px 44px;
+            width: 100%;
+            max-width: 420px;
+        }
+
+        .login-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #003366;
+            margin-bottom: 6px;
+        }
+
+        .login-card p {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 28px;
+        }
+
+        .error {
+            background: #fff0f0;
+            border: 1px solid #f5c6c6;
+            color: #c0392b;
+            padding: 10px 14px;
+            border-radius: 4px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+        }
+		input[type="number"],
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 18px;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        input:focus { border-color: #003366; }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover { background: #00509e; }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #888;
+            text-decoration: none;
+        }
+        .back:hover { color: #003366; }

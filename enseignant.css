@@ -94,7 +94,7 @@
     }
 
     .nav-links a.btn-login {
-      background: #003366;
+      background: #ce1111;
       color: white;
       border-radius: 4px;
       height: 42px;
@@ -111,17 +111,19 @@
 
    /*=====LAYOUT(afficher sidebar+contenus a cote)====*/
    .layout {
-      display: flex;
-      min-height: calc(100px -120px);
+    display: flex;
+    min-height: calc(100vh - 120px); /* ← 100vh = toute la hauteur de l'écran */
+    align-items: stretch; 
    }
 
    /*====SIDEBAR=====*/
    .sidebar {
     width: 230px;
-    background: white;
+    background: #003366;
     padding: 25px 0;
-    
-   }
+    /* supprime flex-shrink ou min-height si tu en avais */
+}
+
    .profil {
     text-align: center;
     padding: 0 15px 20px 15px;
@@ -165,7 +167,7 @@
   .sidebar ul li a:hover {
     background: rgba(255,255,255,0.08);
     color: white;
-    border-left: 4px solid #003366;
+    border-left: 4px solid white;
   }
 
   /*====CONTENU ====*/
@@ -176,7 +178,7 @@
   .page {
     display: none;
   }
-  .page .actif {
+  .page.actif {
     display: block;
   }
   .titre-page {
@@ -203,7 +205,7 @@
     border-radius: 8px;
     padding: 18px 20px;
     border-left: 5px solid #003366;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0,07);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
   }
   .stat .label {
     font-size: 11px;

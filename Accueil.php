@@ -70,7 +70,7 @@
     </div>
       <h3>Etudiant</h3>
       <p>Consultez vos notes, votre moyenne générale et téléchargez votre relevé de notes.</p>
-      <a href="login.php" class="card-link">› Accéder</a>
+      <a href="loginEtud.php" class="card-link">› Accéder</a>
     </div>
     <div class="card">
       <div class="card-num">
@@ -95,7 +95,7 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
-      <h4>GesScol USTHB</h4>
+      <h4>USTHB</h4>
       <p>Système de gestion de scolarité de la Faculté d'Informatique de l'USTHB.</p>
     </div>
     <div class="footer-col">
@@ -105,10 +105,11 @@
       <a href="apropos.php">À propos</a>
     </div>
     <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="Accueil.php">Faculté d'Informatique</a>
-      <a href="Accueil.php">USTHB, Bab Ezzouar</a>
-      <a href="Accueil.php">Alger, Algérie</a>
+      <h4>Devlopeurs</h4>
+      <a href="Accueil.php">Boutine Ikram 242431433013</a>
+      <a href="Accueil.php">Gharbi Aicha 232331418809  </a>
+      <a href="aAccueil.php">Bousbaa Tadj El Baha Lyna 242431433019</a>
+      <a href="Accueil.php">Bouhadda haoua 232331740411</a>
     </div>
   </div>
   <div class="footer-bottom">

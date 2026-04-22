@@ -14,9 +14,10 @@ if (isset($_POST['login'])) {
     // Protection injection SQL
     $nom = mysqli_real_escape_string($conn, $nom);
     $prenom = mysqli_real_escape_string($conn, $prenom);
+   
 
     // Requête
-    $sql = "SELECT * FROM enseignant 
+    $sql = "SELECT * FROM enseignants 
             WHERE nom='$nom' AND prenom='$prenom'";
 
     $result = mysqli_query($conn, $sql);
@@ -69,7 +70,6 @@ if (isset($_POST['login'])) {
     </div>
   </a>
   <div class="nav-links">
-    <a href="Accueil.php">Accueil</a>
     <a href="apropos.php">À propos</a>
     <a href="login-ensei.php" class="btn-login active">Se connecter</a>
   </div>
@@ -89,20 +89,17 @@ if (isset($_POST['login'])) {
 
       <div class="form-group">
         <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom"
-               placeholder="ex: BENABDALLAH" required>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
       </div>
 
       <div class="form-group">
         <label for="prenom">Prénom</label>
-        <input type="text" id="prenom" name="prenom"
-               placeholder="ex: Mohamed" required>
+        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prenom" required>
       </div>
 
       <div class="form-group">
         <label for="password">Mot de passe</label>
-        <input type="password" id="password" name="password"
-               placeholder="Votre mot de passe" required>
+        <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
       </div>
 
       <button type="submit" name="login" class="btn-login">
